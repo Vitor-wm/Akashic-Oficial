@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo | Akashic</title>
+    <link rel="stylesheet" href="painel.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>AKASHIC</h2>
+            <span>PAINEL ADMINISTRATIVO</span>
+        </div>
+
+        <nav>
+            <a href="#inicio" class="ativo">Visão geral</a>
+            <a href="#administradores">Administradores</a>
+            <a href="#jogadores">Jogadores</a>
+            <a href="#configuracoes">Configurações</a>
+            <a href="#registros">Registros</a>
+        </nav>
+
+        <button id="voltarSite">Voltar ao site</button>
+    </aside>
+
+    <main class="conteudo">
+        <header>
+            <div>
+                <span>GERENCIAMENTO</span>
+                <h1>Painel administrativo</h1>
+            </div>
+
+            <div id="perfilAdmin">
+                <span id="nomeAdmin">Administrador</span>
+            </div>
+        </header>
+
+        <section id="inicio" class="secao">
+            <h2>Visão geral</h2>
+            <p>Bem-vindo ao centro de gerenciamento do Akashic.</p>
+
+            <div class="cards">
+                <article class="card">
+                    <span>Administradores</span>
+                    <h3 id="totalAdmins">—</h3>
+                </article>
+
+                <article class="card">
+                    <span>Jogadores registrados</span>
+                    <h3 id="totalJogadores">—</h3>
+                </article>
+
+                <article class="card">
+                    <span>Status do sistema</span>
+                    <h3>Online</h3>
+                </article>
+            </div>
+        </section>
+
+        <section id="administradores" class="secao">
+            <h2>Administradores</h2>
+            <p>Gerencie os usuários autorizados a acessar o painel.</p>
+            <div id="listaAdministradores"></div>
+        </section>
+
+        <section id="jogadores" class="secao">
+            <h2>Jogadores</h2>
+            <p>Consulte os jogadores registrados no site.</p>
+        </section>
+
+        <section id="configuracoes" class="secao">
+            <h2>Configurações</h2>
+            <p>Configurações gerais do painel administrativo.</p>
+        </section>
+
+        <section id="registros" class="secao">
+            <h2>Registros</h2>
+            <p>Histórico de atividades administrativas.</p>
+        </section>
+    </main>
+
+    <script type="module" src="painel.js"></script>
+</body>
+</html>
