@@ -1,9 +1,16 @@
-async function loginDiscord() {
+import { supabase } from './supabase.js';
+
+const botaoLogin = document.getElementById('loginDiscord');
+
+botaoLogin.addEventListener('click', async () => {
     const { error } = await supabase.auth.signInWithOAuth({
-        provider: 'discord'
+        provider: 'discord',
+        options: {
+            redirectTo: window.location.origin
+        }
     });
 
     if (error) {
-        console.error('Erro ao entrar:', error.message);
+        alert('Não foi possível entrar com Discord: ' + error.message);
     }
-}
+});
